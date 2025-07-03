@@ -21,99 +21,199 @@
   <meta property="twitter:description" content="¿Listo para dar el siguiente paso? Envíanos un mensaje y comencemos a construir el futuro inteligente de tu negocio.">
   <meta property="twitter:image" content="https://www.youngmind.ai/images/og-image-contacto.jpg">
 
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#a855f7">
+  <meta name="msapplication-TileColor" content="#020617">
+  <meta name="theme-color" content="#ffffff">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/chatbot.css">
 </head>
 <body>
-  <div class="background-aurora"></div>
+  <div class="background-aurora" aria-hidden="true"></div>
 
   <header class="main-header">
     <div class="container header-content">
-      <div class="site-title gsap-fade"><a href="index.html" aria-label="YoungMind Home">YoungMind</a></div>
-      <nav class="main-nav">
-        <ul>
-          <li class="gsap-fade" style="--delay: 0.1s;"><a href="index.html">Inicio</a></li>
-          <li class="gsap-fade" style="--delay: 0.2s;"><a href="servicios.html">Servicios</a></li>
-          <li class="gsap-fade" style="--delay: 0.3s;"><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
-          <li class="gsap-fade" style="--delay: 0.4s;"><a href="contacto.html" class="active">Contacto</a></li>
+      <div class="site-title gsap-fade">
+        <a href="index.html" aria-label="YoungMind Home">YoungMind</a>
+      </div>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul role="list">
+          <li class="gsap-fade" style="--delay: 0.1s;"><a href="servicios.html">Servicios</a></li>
+          <li class="gsap-fade" style="--delay: 0.2s;"><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+          <li class="gsap-fade" style="--delay: 0.3s;"><a href="contacto.html" class="active">Contacto</a></li>
+          <li class="nav-button gsap-fade" style="--delay: 0.4s;"><a href="#" class="btn btn-primary" aria-label="Solicitar una demostración">Pedir una Demo</a></li>
         </ul>
       </nav>
-      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav-list">
+      <button class="menu-toggle" aria-controls="mobile-nav" aria-expanded="false" aria-label="Abrir menú de navegación">
         <i class="fas fa-bars" aria-hidden="true"></i>
       </button>
     </div>
   </header>
 
   <main>
-    <section class="hero-section section-padding text-center">
-      <div class="container">
-        <h1 class="hero__title gsap-slide-up">Conecta con Nosotros</h1>
-        <p class="hero__subtitle gsap-slide-up" style="--delay: 0.2s;">¿Listo para dar el siguiente paso? Nuestro equipo está aquí para explorar tu proyecto y responder a tus preguntas.</p>
+    <section class="hero-section section-padding">
+      <div class="container text-center">
+        <h1 class="hero__title gsap-slide-up" style="--delay: 0s;">
+          Hablemos de tu <span class="gradient-text">Proyecto de IA</span>
+        </h1>
+        <p class="hero__subtitle lead gsap-slide-up" style="--delay: 0.2s;">
+          ¿Listo para dar el siguiente paso? Envíanos un mensaje y comencemos a construir el futuro inteligente de tu negocio.
+        </p>
+        <div class="hero-actions gsap-slide-up" style="--delay: 0.4s;">
+          <a href="#formulario-contacto" class="btn btn-primary btn-lg">Rellenar Formulario</a>
+          <a href="#informacion-contacto" class="btn btn-secondary btn-lg">Otros Contactos</a>
+        </div>
       </div>
     </section>
 
-    <section class="contact-form-section section-padding">
-      <div class="container contact-container gsap-fade">
-        <div class="contact-form-wrapper">
-          <h2 class="section-title">Envíanos tu Consulta</h2>
-          <p>Rellena el formulario y te contactaremos en menos de 24 horas.</p>
-          <form action="#" method="post" id="main-contact-form" class="contact-form">
+    <section id="formulario-contacto" class="contact-form-section section-padding bg-darker">
+      <div class="container">
+        <h2 class="section-title text-center gsap-slide-up">Envíanos un Mensaje</h2>
+        <p class="lead text-center mb-5 gsap-slide-up" style="--delay: 0.1s;">Completa el formulario y nos pondremos en contacto contigo a la brevedad.</p>
+        
+        <div class="contact-grid">
+          <form id="main-contact-form" class="contact-form gsap-slide-up">
             <div class="form-group">
-                <label for="nombre">Nombre Completo</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required autocomplete="name">
+              <label for="name">Nombre Completo <span class="required">*</span></label>
+              <input type="text" id="name" name="name" required placeholder="Tu nombre">
             </div>
             <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="tu.email@ejemplo.com" required autocomplete="email">
+              <label for="email">Correo Electrónico <span class="required">*</span></label>
+              <input type="email" id="email" name="email" required placeholder="tu.email@ejemplo.com">
             </div>
             <div class="form-group">
-                <label for="asunto">Asunto</label>
-                <input type="text" id="asunto" name="asunto" placeholder="Automatización, Chatbot, Consulta..." required>
+              <label for="subject">Asunto <span class="required">*</span></label>
+              <input type="text" id="subject" name="subject" required placeholder="Tema de tu consulta">
             </div>
             <div class="form-group">
-                <label for="mensaje">Tu Mensaje</label>
-                <textarea id="mensaje" name="mensaje" rows="6" placeholder="Describe tu proyecto o consulta aquí..." required></textarea>
+              <label for="message">Tu Mensaje <span class="required">*</span></label>
+              <textarea id="message" name="message" rows="6" required placeholder="Detalla tu proyecto o consulta aquí..."></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Enviar Mensaje <i class="fas fa-paper-plane icon-right" aria-hidden="true"></i></button>
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="privacy-policy" name="privacy-policy" required>
+              <label for="privacy-policy">He leído y acepto la <a href="#" target="_blank" rel="noopener noreferrer">Política de Privacidad</a> <span class="required">*</span></label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block gsap-fade" style="--delay: 0.2s;">Enviar Mensaje</button>
+            <p class="form-status" aria-live="polite"></p>
           </form>
+
+          <div id="informacion-contacto" class="contact-info-wrapper gsap-slide-up" style="--delay: 0.3s;">
+            <h3 class="gsap-slide-up">Información de Contacto Adicional</h3>
+            <p class="gsap-slide-up" style="--delay: 0.1s;">Puedes contactarnos directamente por los siguientes medios:</p>
+            <div class="contact-info-item gsap-slide-up" style="--delay: 0.2s;">
+              <i class="fas fa-envelope icon-large"></i>
+              <h4>Email</h4>
+              <p><a href="mailto:info@youngmind.ai">info@youngmind.ai</a></p>
+            </div>
+            <div class="contact-info-item gsap-slide-up" style="--delay: 0.3s;">
+              <i class="fas fa-phone-alt icon-large"></i>
+              <h4>Teléfono</h4>
+              <p><a href="tel:+34123456789">+34 123 456 789</a> (Solo con cita previa)</p>
+            </div>
+            <div class="contact-info-item gsap-slide-up" style="--delay: 0.4s;">
+              <i class="fas fa-map-marker-alt icon-large"></i>
+              <h4>Ubicación</h4>
+              <p>A Coruña, España</p>
+            </div>
+            <div class="contact-info-item gsap-slide-up" style="--delay: 0.5s;">
+              <i class="fas fa-clock icon-large"></i>
+              <h4>Horario de Oficina</h4>
+              <p>Lunes - Viernes: 9:00 - 18:00 (CEST)</p>
+            </div>
+          </div>
         </div>
-        <div class="contact-info-wrapper">
-          <h2 class="section-title">Otras Vías</h2>
-           <div class="contact-info-item">
-            <i class="fas fa-envelope icon-large" aria-hidden="true"></i>
-            <h4>Email Directo</h4>
-            <p>Para consultas rápidas o si prefieres este medio.</p>
-            <a href="mailto:info@youngmind.ai">info@youngmind.ai</a>
+      </div>
+    </section>
+
+    <section class="faq-section section-padding">
+      <div class="container text-center">
+        <h2 class="section-title gsap-slide-up">Preguntas Frecuentes</h2>
+        <p class="lead mb-5 gsap-slide-up" style="--delay: 0.1s;">Encuentra respuestas a tus dudas más comunes.</p>
+        <div class="faq-accordion">
+          <div class="accordion-item gsap-slide-up" style="--delay: 0.2s;">
+            <button class="accordion-header" aria-expanded="false" aria-controls="faq-panel-1">
+              ¿Qué tipo de proyectos de IA manejan?
+              <i class="fas fa-chevron-down accordion-icon"></i>
+            </button>
+            <div id="faq-panel-1" class="accordion-content" aria-hidden="true" role="region">
+              <p>En YoungMind, manejamos una amplia gama de proyectos, desde la implementación de chatbots y agentes de IA personalizados, hasta la automatización de workflows complejos, análisis de datos con IA y consultoría estratégica. Nos adaptamos a las necesidades específicas de cada cliente.</p>
+            </div>
           </div>
-          <div class="contact-info-item">
-            <i class="fas fa-calendar-check icon-large" aria-hidden="true"></i>
-            <h4>Agendar Reunión</h4>
-            <p>Reserva una llamada gratuita para hablar de tu proyecto.</p>
-            <a href="#">Calendly (próximamente)</a>
+          <div class="accordion-item gsap-slide-up" style="--delay: 0.3s;">
+            <button class="accordion-header" aria-expanded="false" aria-controls="faq-panel-2">
+              ¿Ofrecen consultoría gratuita?
+              <i class="fas fa-chevron-down accordion-icon"></i>
+            </button>
+            <div id="faq-panel-2" class="accordion-content" aria-hidden="true" role="region">
+              <p>Sí, ofrecemos una sesión de consultoría inicial gratuita para entender tus necesidades y evaluar cómo la IA puede beneficiar a tu negocio. Puedes solicitarla a través de nuestro formulario de contacto o directamente por email.</p>
+            </div>
           </div>
-          <div class="contact-info-item">
-            <i class="fas fa-map-marker-alt icon-large" aria-hidden="true"></i>
-            <h4>Sede</h4>
-            <p>Operamos de forma global desde nuestra base.</p>
-            <span>A Coruña, Galicia, España</span>
+          <div class="accordion-item gsap-slide-up" style="--delay: 0.4s;">
+            <button class="accordion-header" aria-expanded="false" aria-controls="faq-panel-3">
+              ¿Cuál es su proceso de trabajo?
+              <i class="fas fa-chevron-down accordion-icon"></i>
+            </button>
+            <div id="faq-panel-3" class="accordion-content" aria-hidden="true" role="region">
+              <p>Nuestro proceso de trabajo comienza con una fase de descubrimiento y análisis de tus necesidades, seguido de la conceptualización y diseño de la solución. Luego, pasamos al desarrollo, implementación, pruebas y, finalmente, el soporte y mantenimiento continuos.</p>
+            </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section section-padding">
+      <div class="container text-center">
+        <h2 class="section-title gsap-slide-up">¿Prefieres que te Llamemos?</h2>
+        <p class="lead gsap-slide-up" style="--delay: 0.1s;">Déjanos tus datos y nos pondremos en contacto contigo.</p>
+        <div class="cta-actions gsap-slide-up" style="--delay: 0.3s;">
+          <a href="#formulario-contacto" class="btn btn-primary btn-lg">Solicitar Llamada</a>
+          <a href="servicios.html" class="btn btn-secondary btn-lg">Ver Servicios</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="main-footer">
-    <div class="container text-center">
-      <p>&copy; <span id="current-year"></span> YoungMind. El futuro es ahora.</p>
-      <div class="social-links">
+    <div class="container footer-content">
+      <div class="footer-brand gsap-fade">
+        <h3>YoungMind</h3>
+        <p>Redefiniendo la Inteligencia Artificial.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Navegación del pie de página">
+        <h4>Enlaces Rápidos</h4>
+        <ul role="list">
+          <li class="gsap-fade" style="--delay: 0.1s;"><a href="index.html">Inicio</a></li>
+          <li class="gsap-fade" style="--delay: 0.2s;"><a href="servicios.html">Servicios</a></li>
+          <li class="gsap-fade" style="--delay: 0.3s;"><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+          <li class="gsap-fade" style="--delay: 0.4s;"><a href="contacto.html">Contacto</a></li>
+          <li class="gsap-fade" style="--delay: 0.5s;"><a href="#">Política de Privacidad</a></li>
+        </ul>
+      </nav>
+      <div class="footer-contact gsap-fade">
+        <h4>Contacto</h4>
+        <p><i class="fas fa-envelope"></i> info@youngmind.ai</p>
+        <p><i class="fas fa-map-marker-alt"></i> A Coruña, España</p>
+      </div>
+      <div class="footer-social gsap-fade">
+        <h4>Síguenos</h4>
         <a href="#" aria-label="Visita nuestro LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
         <a href="#" aria-label="Visita nuestro Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
         <a href="#" aria-label="Visita nuestro Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container text-center">
+        <p>&copy; <span id="current-year"></span> YoungMind. Todos los derechos reservados.</p>
       </div>
     </div>
   </footer>
@@ -139,9 +239,9 @@
     </div>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="js/script.js"></script>
-  <script src="js/chatbot.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/script.js" defer></script>
+  <script src="js/chatbot.js" defer></script>
 </body>
 </html>

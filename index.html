@@ -21,112 +21,209 @@
   <meta property="twitter:description" content="Transformamos empresas con soluciones de IA que no solo automatizan, sino que innovan, inspiran y lideran.">
   <meta property="twitter:image" content="https://www.youngmind.ai/images/og-image.jpg">
 
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#a855f7">
+  <meta name="msapplication-TileColor" content="#020617">
+  <meta name="theme-color" content="#ffffff">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/chatbot.css">
 </head>
 <body>
-  <div class="background-aurora"></div>
+  <div class="background-aurora" aria-hidden="true"></div>
 
   <header class="main-header">
     <div class="container header-content">
-      <div class="site-title gsap-fade"><a href="index.html" aria-label="YoungMind Home">YoungMind</a></div>
-      <nav class="main-nav">
-        <ul>
-          <li class="gsap-fade" style="--delay: 0.1s;"><a href="index.html" class="active">Inicio</a></li>
-          <li class="gsap-fade" style="--delay: 0.2s;"><a href="servicios.html">Servicios</a></li>
-          <li class="gsap-fade" style="--delay: 0.3s;"><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
-          <li class="gsap-fade" style="--delay: 0.4s;"><a href="contacto.html">Contacto</a></li>
+      <div class="site-title gsap-fade">
+        <a href="index.html" aria-label="YoungMind Home">YoungMind</a>
+      </div>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul role="list">
+          <li class="gsap-fade" style="--delay: 0.1s;"><a href="servicios.html">Servicios</a></li>
+          <li class="gsap-fade" style="--delay: 0.2s;"><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+          <li class="gsap-fade" style="--delay: 0.3s;"><a href="contacto.html">Contacto</a></li>
+          <li class="nav-button gsap-fade" style="--delay: 0.4s;"><a href="#" class="btn btn-primary" aria-label="Solicitar una demostración">Pedir una Demo</a></li>
         </ul>
       </nav>
-      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav-list">
+      <button class="menu-toggle" aria-controls="mobile-nav" aria-expanded="false" aria-label="Abrir menú de navegación">
         <i class="fas fa-bars" aria-hidden="true"></i>
       </button>
     </div>
   </header>
 
   <main>
-    <section class="hero-section section-padding text-center">
-      <div class="container">
-        <h1 class="hero__title gsap-slide-up">El Futuro es Ahora.<br>Tu Negocio También Debería Serlo.</h1>
-        <p class="hero__subtitle gsap-slide-up" style="--delay: 0.2s;">Transformamos empresas con soluciones de IA que no solo automatizan, sino que innovan, inspiran y lideran.</p>
-        <div class="gsap-slide-up" style="--delay: 0.4s;">
-          <a class="btn btn-primary" href="contacto.html">Solicita una Consultoría <i class="fas fa-arrow-right icon-right" aria-hidden="true"></i></a>
+    <section class="hero-section section-padding">
+      <div class="container text-center">
+        <h1 class="hero__title gsap-slide-up" style="--delay: 0s;">
+          Redefiniendo el Futuro con <span class="gradient-text">Inteligencia Artificial</span>
+        </h1>
+        <p class="hero__subtitle lead gsap-slide-up" style="--delay: 0.2s;">
+          Transformamos empresas con soluciones de IA que no solo automatizan, sino que innovan, inspiran y lideran.
+        </p>
+        <div class="hero-actions gsap-slide-up" style="--delay: 0.4s;">
+          <a href="contacto.html" class="btn btn-primary btn-lg">Empezar Ahora</a>
+          <a href="servicios.html" class="btn btn-secondary btn-lg">Nuestros Servicios</a>
+        </div>
+        <div class="hero-image-placeholder gsap-fade" style="--delay: 0.6s;">
+          <img src="https://via.placeholder.com/800x450/0A192F/E2E8F0?text=Imagen+Hero+IA" alt="Ilustración abstracta de inteligencia artificial y conexión de datos" class="img-fluid">
         </div>
       </div>
     </section>
 
-    <section class="services-overview section-padding">
-      <div class="container">
-        <h2 class="section-title text-center gsap-fade">Un Ecosistema de Soluciones Inteligentes</h2>
+    <section class="services-overview-section section-padding bg-darker">
+      <div class="container text-center">
+        <h2 class="section-title gsap-slide-up">Nuestros Servicios de Vanguardia</h2>
+        <p class="lead mb-5 gsap-slide-up" style="--delay: 0.1s;">Ofrecemos soluciones de IA diseñadas para impulsar tu negocio.</p>
         <div class="service-cards-grid">
-          <div class="service-card gsap-card">
-            <div class="card-border"></div>
-            <i class="fas fa-robot service-icon" aria-hidden="true"></i>
-            <h4>Agentes de IA a Medida</h4>
-            <p>Asistentes autónomos que ejecutan tareas complejas, aprenden de los datos y se convierten en el motor productivo de tu equipo.</p>
-          </div>
-          <div class="service-card gsap-card" style="--delay: 0.2s">
-            <div class="card-border"></div>
-            <i class="fas fa-comments service-icon" aria-hidden="true"></i>
-            <h4>Bots Conversacionales</h4>
-            <p>Diálogos inteligentes y fluidos en tu web o WhatsApp que entienden la intención y resuelven necesidades, no solo responden preguntas.</p>
-          </div>
-          <div class="service-card gsap-card" style="--delay: 0.4s">
-            <div class="card-border"></div>
-            <i class="fas fa-sync-alt service-icon" aria-hidden="true"></i>
-            <h4>Automatización de Workflows</h4>
-            <p>Orquestamos tus aplicaciones y procesos en una sinfonía de eficiencia, eliminando cuellos de botella y tareas manuales.</p>
-          </div>
-        </div>
-        <div class="text-center mt-5 gsap-fade">
-          <a class="btn btn-secondary" href="servicios.html">Explorar todos los servicios <i class="fas fa-chevron-right icon-right" aria-hidden="true"></i></a>
+          <article class="service-card gsap-card">
+            <i class="fas fa-robot icon-large"></i>
+            <h3>Agentes IA Personalizados</h3>
+            <p>Automatiza tareas complejas y toma decisiones inteligentes con asistentes autónomos.</p>
+            <a href="servicios.html#agentes" class="link-arrow">Saber Más <i class="fas fa-arrow-right"></i></a>
+          </article>
+          <article class="service-card gsap-card">
+            <i class="fas fa-comments icon-large"></i>
+            <h3>Bots Conversacionales</h3>
+            <p>Mejora la atención al cliente 24/7 y la experiencia de usuario con chatbots avanzados.</p>
+            <a href="servicios.html#bots" class="link-arrow">Saber Más <i class="fas fa-arrow-right"></i></a>
+          </article>
+          <article class="service-card gsap-card">
+            <i class="fas fa-cogs icon-large"></i>
+            <h3>Automatización de Workflows</h3>
+            <p>Optimiza tus procesos de negocio y reduce costes con automatizaciones inteligentes.</p>
+            <a href="servicios.html#automatizacion" class="link-arrow">Saber Más <i class="fas fa-arrow-right"></i></a>
+          </article>
+          <article class="service-card gsap-card">
+            <i class="fas fa-chart-line icon-large"></i>
+            <h3>Análisis de Datos con IA</h3>
+            <p>Descubre insights valiosos y predice tendencias con el poder de la inteligencia artificial.</p>
+            <a href="servicios.html#analisis-datos" class="link-arrow">Saber Más <i class="fas fa-arrow-right"></i></a>
+          </article>
+          <article class="service-card gsap-card">
+            <i class="fas fa-brain icon-large"></i>
+            <h3>Consultoría Estratégica en IA</h3>
+            <p>Guía experta para implementar y escalar soluciones de IA en tu empresa.</p>
+            <a href="servicios.html#consultoria" class="link-arrow">Saber Más <i class="fas fa-arrow-right"></i></a>
+          </article>
+          <article class="service-card gsap-card">
+            <i class="fas fa-link icon-large"></i>
+            <h3>Integración de APIs</h3>
+            <p>Conecta tus sistemas y flujos de datos para una operación de IA fluida y unificada.</p>
+            <a href="servicios.html#integracion-apis" class="link-arrow">Saber Más <i class="fas fa-arrow-right"></i></a>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="about-brief section-padding">
-        <div class="container grid-2-columns-responsive">
-            <div class="about-content gsap-slide-left">
-                <h2 class="section-title">Innovación con Propósito</h2>
-                <p>No aplicamos IA solo porque es la tecnología de moda. La integramos para resolver problemas reales. Nuestra misión es simple: darte las herramientas para que tu visión de negocio no tenga límites.</p>
-                <p>Fundada en A Coruña, nuestra perspectiva es global. Combinamos la audacia de la juventud con un profundo conocimiento técnico para crear un impacto medible.</p>
-                <a class="btn btn-secondary" href="sobre-nosotros.html">Nuestra historia <i class="fas fa-arrow-right icon-right" aria-hidden="true"></i></a>
-            </div>
-            <div class="about-image-container gsap-slide-right">
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1677756119517-756a188d2d94?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600" alt="Visualización abstracta de redes neuronales de IA" loading="lazy">
-                </div>
-            </div>
+    <section class="why-choose-us-section section-padding">
+      <div class="container">
+        <div class="why-choose-us-content">
+          <div class="why-choose-us-text gsap-slide-up">
+            <h2 class="section-title">¿Por Qué Elegir YoungMind?</h2>
+            <p class="lead">Combinamos innovación, experiencia y un enfoque centrado en el cliente para ofrecerte resultados tangibles.</p>
+            <ul class="feature-list" role="list">
+              <li class="gsap-slide-up" style="--delay: 0.1s;"><i class="fas fa-check-circle icon-bullet"></i> Soluciones a Medida</li>
+              <li class="gsap-slide-up" style="--delay: 0.2s;"><i class="fas fa-check-circle icon-bullet"></i> Equipo de Expertos</li>
+              <li class="gsap-slide-up" style="--delay: 0.3s;"><i class="fas fa-check-circle icon-bullet"></i> Innovación Continua</li>
+              <li class="gsap-slide-up" style="--delay: 0.4s;"><i class="fas fa-check-circle icon-bullet"></i> Enfoque en Resultados</li>
+            </ul>
+            <a href="sobre-nosotros.html" class="btn btn-primary mt-4">Conoce Nuestro Equipo</a>
+          </div>
+          <div class="why-choose-us-image gsap-fade" style="--delay: 0.5s;">
+            <img src="https://via.placeholder.com/500x400/0A192F/E2E8F0?text=Equipo+YoungMind" alt="Equipo de YoungMind trabajando colaborativamente" class="img-fluid rounded-borders">
+          </div>
         </div>
+      </div>
     </section>
 
-    <section class="cta-section section-padding text-center">
-        <div class="container gsap-fade">
-            <h2 class="section-title">¿Estás listo para dejar de adaptarte y empezar a liderar?</h2>
-            <p class="cta-text">El primer paso hacia la transformación es una conversación. Hablemos de cómo la IA puede redefinir tu éxito.</p>
-            <a class="btn btn-primary btn-pulse" href="contacto.html">Construyamos el Futuro <i class="fas fa-rocket icon-right" aria-hidden="true"></i></a>
+    <section class="testimonials-section section-padding bg-darker">
+      <div class="container text-center">
+        <h2 class="section-title gsap-slide-up">Lo que Dicen Nuestros Clientes</h2>
+        <p class="lead mb-5 gsap-slide-up" style="--delay: 0.1s;">Historias de éxito que inspiran confianza.</p>
+        <div class="testimonials-grid">
+          <blockquote class="testimonial-card gsap-card">
+            <p>"YoungMind transformó nuestra atención al cliente con sus chatbots. El aumento de eficiencia es notable."</p>
+            <footer>
+              <img src="https://via.placeholder.com/60x60/333/fff?text=JR" alt="Foto de Juan R." class="testimonial-avatar">
+              <cite>Juan R. - CEO, InnovateTech</cite>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial-card gsap-card">
+            <p>"La consultoría de YoungMind fue clave para nuestra estrategia de IA. Profesionales y con visión de futuro."</p>
+            <footer>
+              <img src="https://via.placeholder.com/60x60/333/fff?text=MP" alt="Foto de María P." class="testimonial-avatar">
+              <cite>María P. - Directora de Estrategia, GlobalSolutions</cite>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial-card gsap-card">
+            <p>"Su solución de automatización superó nuestras expectativas. Ahora nuestros procesos son más fluidos que nunca."</p>
+            <footer>
+              <img src="https://via.placeholder.com/60x60/333/fff?text=CR" alt="Foto de Carlos R." class="testimonial-avatar">
+              <cite>Carlos R. - Gerente de Operaciones, AgileFlow</cite>
+            </footer>
+          </blockquote>
         </div>
+      </div>
+    </section>
+
+    <section class="cta-section section-padding">
+      <div class="container text-center">
+        <h2 class="section-title gsap-slide-up">¿Listo para el Siguiente Paso?</h2>
+        <p class="lead gsap-slide-up" style="--delay: 0.1s;">Envíanos un mensaje y comencemos a construir el futuro inteligente de tu negocio.</p>
+        <div class="cta-actions gsap-slide-up" style="--delay: 0.3s;">
+          <a href="contacto.html" class="btn btn-primary btn-lg">Contactar Ahora</a>
+          <a href="servicios.html" class="btn btn-secondary btn-lg">Explorar Servicios</a>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="main-footer">
-    <div class="container text-center">
-      <p>&copy; <span id="current-year"></span> YoungMind. El futuro es ahora.</p>
-      <div class="social-links">
+    <div class="container footer-content">
+      <div class="footer-brand gsap-fade">
+        <h3>YoungMind</h3>
+        <p>Redefiniendo la Inteligencia Artificial.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Navegación del pie de página">
+        <h4>Enlaces Rápidos</h4>
+        <ul role="list">
+          <li class="gsap-fade" style="--delay: 0.1s;"><a href="index.html">Inicio</a></li>
+          <li class="gsap-fade" style="--delay: 0.2s;"><a href="servicios.html">Servicios</a></li>
+          <li class="gsap-fade" style="--delay: 0.3s;"><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+          <li class="gsap-fade" style="--delay: 0.4s;"><a href="contacto.html">Contacto</a></li>
+          <li class="gsap-fade" style="--delay: 0.5s;"><a href="#">Política de Privacidad</a></li>
+        </ul>
+      </nav>
+      <div class="footer-contact gsap-fade">
+        <h4>Contacto</h4>
+        <p><i class="fas fa-envelope"></i> info@youngmind.ai</p>
+        <p><i class="fas fa-map-marker-alt"></i> A Coruña, España</p>
+      </div>
+      <div class="footer-social gsap-fade">
+        <h4>Síguenos</h4>
         <a href="#" aria-label="Visita nuestro LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
         <a href="#" aria-label="Visita nuestro Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
         <a href="#" aria-label="Visita nuestro Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
       </div>
     </div>
+    <div class="footer-bottom">
+      <div class="container text-center">
+        <p>&copy; <span id="current-year"></span> YoungMind. Todos los derechos reservados.</p>
+      </div>
+    </div>
   </footer>
 
   <div id="chatbot-container">
-    <button id="chatbot-toggle" aria-label="Abrir asistente virtual">
+     <button id="chatbot-toggle" aria-label="Abrir asistente virtual">
       <i class="fa-solid fa-comment-dots" aria-hidden="true"></i>
       <i class="fa-solid fa-xmark" aria-hidden="true"></i>
     </button>
@@ -146,9 +243,9 @@
     </div>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="js/script.js"></script>
-  <script src="js/chatbot.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/script.js" defer></script>
+  <script src="js/chatbot.js" defer></script>
 </body>
 </html>

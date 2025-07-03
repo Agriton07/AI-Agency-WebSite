@@ -21,93 +21,184 @@
   <meta property="twitter:description" content="Conoce al equipo, la misión y la visión de YoungMind. Pioneros en IA desde A Coruña con una visión global.">
   <meta property="twitter:image" content="https://www.youngmind.ai/images/og-image-about.jpg">
   
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#a855f7">
+  <meta name="msapplication-TileColor" content="#020617">
+  <meta name="theme-color" content="#ffffff">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/chatbot.css">
 </head>
 <body>
-  <div class="background-aurora"></div>
+  <div class="background-aurora" aria-hidden="true"></div>
 
   <header class="main-header">
     <div class="container header-content">
-      <div class="site-title gsap-fade"><a href="index.html" aria-label="YoungMind Home">YoungMind</a></div>
-      <nav class="main-nav">
-        <ul>
-          <li class="gsap-fade" style="--delay: 0.1s;"><a href="index.html">Inicio</a></li>
-          <li class="gsap-fade" style="--delay: 0.2s;"><a href="servicios.html">Servicios</a></li>
-          <li class="gsap-fade" style="--delay: 0.3s;"><a href="sobre-nosotros.html" class="active">Sobre Nosotros</a></li>
-          <li class="gsap-fade" style="--delay: 0.4s;"><a href="contacto.html">Contacto</a></li>
+      <div class="site-title gsap-fade">
+        <a href="index.html" aria-label="YoungMind Home">YoungMind</a>
+      </div>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul role="list">
+          <li class="gsap-fade" style="--delay: 0.1s;"><a href="servicios.html">Servicios</a></li>
+          <li class="gsap-fade" style="--delay: 0.2s;"><a href="sobre-nosotros.html" class="active">Sobre Nosotros</a></li>
+          <li class="gsap-fade" style="--delay: 0.3s;"><a href="contacto.html">Contacto</a></li>
+          <li class="nav-button gsap-fade" style="--delay: 0.4s;"><a href="#" class="btn btn-primary" aria-label="Solicitar una demostración">Pedir una Demo</a></li>
         </ul>
       </nav>
-      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav-list">
+      <button class="menu-toggle" aria-controls="mobile-nav" aria-expanded="false" aria-label="Abrir menú de navegación">
         <i class="fas fa-bars" aria-hidden="true"></i>
       </button>
     </div>
   </header>
 
   <main>
-    <section class="hero-section section-padding text-center">
-      <div class="container">
-        <h1 class="hero__title gsap-slide-up">La Mente detrás de la Innovación</h1>
-        <p class="hero__subtitle gsap-slide-up" style="--delay: 0.2s;">Somos pioneros en la aplicación de IA para transformar negocios, con raíces en A Coruña y una visión global.</p>
+    <section class="hero-section section-padding">
+      <div class="container text-center">
+        <h1 class="hero__title gsap-slide-up" style="--delay: 0s;">
+          La Mente Detrás de la <span class="gradient-text">Innovación en IA</span>
+        </h1>
+        <p class="hero__subtitle lead gsap-slide-up" style="--delay: 0.2s;">
+          Conoce a nuestro equipo, nuestra misión y la visión que nos impulsa a redefinir el futuro.
+        </p>
+        <div class="hero-actions gsap-slide-up" style="--delay: 0.4s;">
+          <a href="#nuestro-equipo" class="btn btn-primary btn-lg">Conoce al Equipo</a>
+          <a href="#nuestra-historia" class="btn btn-secondary btn-lg">Nuestra Historia</a>
+        </div>
       </div>
     </section>
 
-    <section class="about-us-content section-padding">
+    <section id="nuestra-mision-vision" class="mission-vision-section section-padding bg-darker">
+      <div class="container grid-2-cols">
+        <div class="mission-card gsap-slide-up">
+          <i class="fas fa-bullseye icon-large"></i>
+          <h2 class="section-title">Nuestra Misión</h2>
+          <p>Potenciar a las empresas con soluciones de Inteligencia Artificial que no solo optimizan operaciones, sino que también abren nuevas vías para el crecimiento y la innovación, asegurando un impacto positivo y sostenible.</p>
+        </div>
+        <div class="vision-card gsap-slide-up" style="--delay: 0.1s;">
+          <i class="fas fa-lightbulb icon-large"></i>
+          <h2 class="section-title">Nuestra Visión</h2>
+          <p>Ser referentes globales en el desarrollo de IA a medida, reconocidos por nuestra excelencia tecnológica, nuestro enfoque ético y nuestra capacidad de transformar desafíos complejos en oportunidades inteligentes para el futuro.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="nuestro-equipo" class="team-section section-padding">
+      <div class="container text-center">
+        <h2 class="section-title gsap-slide-up">Conoce a Nuestro Equipo Fundador</h2>
+        <p class="lead mb-5 gsap-slide-up" style="--delay: 0.1s;">Mentes brillantes que lideran la innovación en IA.</p>
+        <div class="team-grid">
+          <div class="team-member-card gsap-card">
+            <img src="https://via.placeholder.com/200x200/1E293B/E2E8F0?text=Adrian+Alvarez" alt="Foto de Adrián Álvarez Sande" class="team-member-avatar">
+            <h3>Adrián Álvarez Sande</h3>
+            <p class="role">Co-fundador & CEO</p>
+            <p>Visionario estratégico con amplia experiencia en dirección de proyectos de IA y desarrollo de negocio.</p>
+            <div class="social-links">
+              <a href="#" aria-label="LinkedIn de Adrián"><i class="fab fa-linkedin"></i></a>
+              <a href="#" aria-label="Twitter de Adrián"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="team-member-card gsap-card">
+            <img src="https://via.placeholder.com/200x200/1E293B/E2E8F0?text=Pablo+Rodriguez" alt="Foto de Pablo Rodríguez Andújar" class="team-member-avatar">
+            <h3>Pablo Rodríguez Andújar</h3>
+            <p class="role">Co-fundador & CTO</p>
+            <p>Experto en arquitectura de software y machine learning, liderando la innovación tecnológica de YoungMind.</p>
+            <div class="social-links">
+              <a href="#" aria-label="LinkedIn de Pablo"><i class="fab fa-linkedin"></i></a>
+              <a href="#" aria-label="Twitter de Pablo"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="nuestra-historia" class="history-section section-padding bg-darker">
       <div class="container">
-        <div class="about-section-text text-center gsap-fade">
-            <h2 class="section-title">Nuestra Filosofía</h2>
-            <p style="max-width: 800px; margin: 0 auto 60px auto;">Nacimos de la convicción de que la IA no es un privilegio para grandes corporaciones, sino una herramienta de democratización. Creemos en un futuro donde la tecnología y el talento humano colaboran para crear soluciones más eficientes, inteligentes y humanas.</p>
-        </div>
-
-        <div class="team-section">
-          <h2 class="section-title text-center gsap-fade">Conoce a los Fundadores</h2>
-          <div class="team-cards-grid">
-            
-            <div class="service-card team-card gsap-card">
-              <img src="https://via.placeholder.com/150/9333ea/FFFFFF?text=AA" alt="Foto de Adrián Álvarez Sande" class="team-photo">
-              <h4>Adrián Álvarez Sande</h4>
-              <p class="team-role">Co-Fundador & Estratega IA</p>
-              <p>Estudiante de Ciencias de la Computación y Economía en la Vrije Universiteit Amsterdam. Adrián aporta la visión estratégica y la arquitectura de soluciones.</p>
+        <h2 class="section-title text-center gsap-slide-up">Nuestra Historia</h2>
+        <div class="history-timeline">
+          <div class="timeline-item gsap-slide-up">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>2020: Los Inicios</h4>
+              <p>Dos apasionados de la IA, Adrián y Pablo, se unen con la visión de crear soluciones de IA que realmente transformen negocios.</p>
             </div>
-            
-            <div class="service-card team-card gsap-card">
-              <img src="https://via.placeholder.com/150/10b981/FFFFFF?text=PR" alt="Foto de Pablo Rodríguez Andújar" class="team-photo">
-              <h4>Pablo Rodríguez Andújar</h4>
-              <p class="team-role">Co-Fundador & Data Scientist</p>
-              <p>Estudiante de Ciencia de Datos e IA en CUNEF, Madrid. Pablo es el experto en transformar datos en inteligencia para potenciar nuestros modelos de IA.</p>
+          </div>
+          <div class="timeline-item gsap-slide-up" style="--delay: 0.1s;">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>2021: Primeros Proyectos</h4>
+              <p>YoungMind se establece formalmente, lanzando sus primeros proyectos piloto exitosos con clientes locales.</p>
             </div>
-
+          </div>
+          <div class="timeline-item gsap-slide-up" style="--delay: 0.2s;">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>2023: Expansión de Servicios</h4>
+              <p>Se amplía el catálogo de servicios, incluyendo consultoría estratégica y análisis de datos avanzado.</p>
+            </div>
+          </div>
+          <div class="timeline-item gsap-slide-up" style="--delay: 0.3s;">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>Hoy: Liderando la Innovación</h4>
+              <p>YoungMind continúa creciendo, implementando soluciones de IA de vanguardia para clientes a nivel nacional e internacional.</p>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="mission-vision-grid mt-5">
-          <div class="mission-vision-item gsap-slide-left">
-            <i class="fas fa-bullseye service-icon" aria-hidden="true"></i>
-            <h4>Nuestra Misión</h4>
-            <p>Facilitar el acceso a tecnologías de IA de vanguardia para empresas de todos los tamaños, optimizando sus procesos y fomentando la innovación continua.</p>
-          </div>
-          <div class="mission-vision-item gsap-slide-right">
-            <i class="fas fa-lightbulb service-icon" aria-hidden="true"></i>
-            <h4>Nuestra Visión</h4>
-            <p>Consolidarnos como la agencia de IA referente, reconocidos por nuestra excelencia técnica, innovación y compromiso con el éxito de nuestros clientes.</p>
-          </div>
+    <section class="cta-section section-padding">
+      <div class="container text-center">
+        <h2 class="section-title gsap-slide-up">Construyamos el Futuro Juntos</h2>
+        <p class="lead gsap-slide-up" style="--delay: 0.1s;">¿Tienes un proyecto en mente? Contacta con nosotros.</p>
+        <div class="cta-actions gsap-slide-up" style="--delay: 0.3s;">
+          <a href="contacto.html" class="btn btn-primary btn-lg">Contactar Ahora</a>
+          <a href="servicios.html" class="btn btn-secondary btn-lg">Explorar Servicios</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="main-footer">
-    <div class="container text-center">
-      <p>&copy; <span id="current-year"></span> YoungMind. El futuro es ahora.</p>
-      <div class="social-links">
+    <div class="container footer-content">
+      <div class="footer-brand gsap-fade">
+        <h3>YoungMind</h3>
+        <p>Redefiniendo la Inteligencia Artificial.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Navegación del pie de página">
+        <h4>Enlaces Rápidos</h4>
+        <ul role="list">
+          <li class="gsap-fade" style="--delay: 0.1s;"><a href="index.html">Inicio</a></li>
+          <li class="gsap-fade" style="--delay: 0.2s;"><a href="servicios.html">Servicios</a></li>
+          <li class="gsap-fade" style="--delay: 0.3s;"><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+          <li class="gsap-fade" style="--delay: 0.4s;"><a href="contacto.html">Contacto</a></li>
+          <li class="gsap-fade" style="--delay: 0.5s;"><a href="#">Política de Privacidad</a></li>
+        </ul>
+      </nav>
+      <div class="footer-contact gsap-fade">
+        <h4>Contacto</h4>
+        <p><i class="fas fa-envelope"></i> info@youngmind.ai</p>
+        <p><i class="fas fa-map-marker-alt"></i> A Coruña, España</p>
+      </div>
+      <div class="footer-social gsap-fade">
+        <h4>Síguenos</h4>
         <a href="#" aria-label="Visita nuestro LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
         <a href="#" aria-label="Visita nuestro Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
         <a href="#" aria-label="Visita nuestro Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container text-center">
+        <p>&copy; <span id="current-year"></span> YoungMind. Todos los derechos reservados.</p>
       </div>
     </div>
   </footer>
@@ -133,9 +224,9 @@
     </div>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="js/script.js"></script>
-  <script src="js/chatbot.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/script.js" defer></script>
+  <script src="js/chatbot.js" defer></script>
 </body>
 </html>
