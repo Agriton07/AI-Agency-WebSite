@@ -323,3 +323,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // debug helper - safe to remove
   // console.log('UI script loaded');
 });
+
+// ====== Menú móvil ======
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector("#mobile-nav");
+
+  if (menuToggle && nav) {
+    menuToggle.addEventListener("click", () => {
+      nav.classList.toggle("open");
+      const expanded = nav.classList.contains("open");
+      menuToggle.setAttribute("aria-expanded", expanded);
+    });
+  }
+});
