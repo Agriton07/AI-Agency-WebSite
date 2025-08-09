@@ -943,7 +943,7 @@ a:hover {
   .main-nav {
     display: none;
     flex-direction: column;
-    background-color: #020617; /* color de fondo del menú móvil */
+    background-color: #F4F7FA; /* color de fondo del menú móvil */
     position: absolute;
     top: 60px; /* debajo del header */
     right: 0;
@@ -959,7 +959,7 @@ a:hover {
     gap: 1rem;
   }
   .main-nav a {
-    color: white;
+    color: rgb(49, 47, 47);
     text-decoration: none;
     font-size: 1rem;
   }
